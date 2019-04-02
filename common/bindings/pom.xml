@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>   
+    <parent>
+        <groupId>fit.astro.vsa</groupId>
+        <artifactId>common</artifactId>
+        <version>0.1.0-SNAPSHOT</version>
+    </parent>
+    <groupId>fit.astro.vsa.common</groupId>
+    <artifactId>bindings</artifactId>
+    <packaging>pom</packaging>
+    <name>VSA :: Common :: Bindings</name>
+    <modules>
+        <module>math-bindings</module>
+        <module>ml-bindings</module>
+        <module>analysis-bindings</module>
+    </modules>
+</project>

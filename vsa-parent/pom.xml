@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>fit.astro.vsa</groupId>
+    <artifactId>vsa-parent</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>VSA Parent</name>
+    <description>VSA Parent</description>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- Apache Packages  -->
+        <commons.lang3.version>3.4</commons.lang3.version>
+        <commons.math3.version>3.6</commons.math3.version>
+        <commons-io.version>2.4</commons-io.version>
+            <!-- Testing  -->
+        <junit.version>4.11</junit.version>
+            <!-- Logging  -->
+        <org.slf4j.version>1.7.25</org.slf4j.version>
+        <!-- science packages -->
+            <!-- JSOFA  -->
+        <org.jastronomy.version>20180130</org.jastronomy.version>
+            <!-- https://mvnrepository.com/artifact/com.diffplug.matsim/matfilerw -->
+        <com.diffplug.matsim.version>3.1.0</com.diffplug.matsim.version>
+            <!-- ND4J Linear Algebra Package  -->
+        <nd4j.version>1.0.0-alpha</nd4j.version>
+        <!-- maven versions -->
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven-compiler-plugin-version>3.8.0</maven-compiler-plugin-version>
+        <maven-jar-plugin-version>3.1.0</maven-jar-plugin-version>
+        <maven-assembly-plugin-version>3.1.0</maven-assembly-plugin-version>
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-math3</artifactId>
+                <version>${commons.math3.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons.lang3.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${org.slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-simple</artifactId>
+                <version>${org.slf4j.version}</version>
+            </dependency>
+            
+            <!-- The default backend for CPUs is nd4j-native-platform, 
+            and for CUDA it is nd4j-cuda-8.0-platform. -->
+            
+            <dependency>
+                <groupId>org.nd4j</groupId>
+                <artifactId>nd4j-native-platform</artifactId>
+                <version>${nd4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jastronomy</groupId>
+                <artifactId>jsofa</artifactId>
+                <version>${org.jastronomy.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons-io.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency> 
+                <!-- https://mvnrepository.com/artifact/com.diffplug.matsim/matfilerw -->
+                <groupId>com.diffplug.matsim</groupId> 
+                <artifactId>matfilerw</artifactId> 
+                <version>${com.diffplug.matsim.version}</version>
+            </dependency> 
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven-compiler-plugin-version}</version>
+                </plugin>
+            
+                <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-jar-plugin -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>${maven-jar-plugin-version}</version>
+                </plugin>
+
+                <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-assembly-plugin -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <version>${maven-assembly-plugin-version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>
