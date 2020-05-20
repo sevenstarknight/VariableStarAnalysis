@@ -21,13 +21,14 @@ import fit.astro.vsa.common.bindings.math.Real2DCurve;
 import org.apache.commons.math3.linear.RealMatrix;
 
 /**
+ * Interface for matrix variates
  *
  * @author kjohnston
  */
 public interface MatrixVariateTransform {
-    
+
     int[] getMatrixDimensions();
-    
+
     RealMatrix evaluate(Real2DCurve inputSeries);
-    
+
 }

@@ -19,6 +19,7 @@ package fit.astro.vsa.common.bindings.analysis.astro;
 import java.util.Map;
 
 /**
+ * Variable star information
  *
  * @author Kyle Johnston <kyjohnst2000@my.fit.edu>
  */
@@ -30,20 +31,33 @@ public class VarStarInformation {
     /**
      * Must have a name, might have other things
      *
-     * @param id
+     * @param id Target ID
      */
     public VarStarInformation(String id) {
         this.id = id;
     }
 
+    /**
+     *
+     * @return Target ID
+     */
     public String getId() {
         return id;
     }
 
+    /**
+     *
+     * @return Astrometric values (stellar position)
+     */
     public Map<Astrometrics, Double> getAstrometricValues() {
         return astrometricValues;
     }
 
+    /**
+     * Astrometric values (stellar position)
+     *
+     * @param astrometricValues
+     */
     public void setAstrometricValues(Map<Astrometrics, Double> astrometricValues) {
         this.astrometricValues = astrometricValues;
     }

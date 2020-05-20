@@ -18,6 +18,7 @@ package fit.astro.vsa.common.bindings.analysis.astro;
 
 /**
  * Time domain statistic measurements
+ *
  * @author Kyle Johnston <kyjohnst2000@my.fit.edu>
  */
 public enum TimeDomainStatistics {
@@ -31,6 +32,10 @@ public enum TimeDomainStatistics {
         this.methodLabel = methodLabel;
     }
 
+    /**
+     *
+     * @return Label for what it is
+     */
     public String getMethodLabel() {
         return methodLabel;
     }

@@ -18,6 +18,7 @@ package fit.astro.vsa.common.bindings.analysis.astro;
 
 /**
  * Photometric Colors Observed
+ *
  * @author Kyle Johnston <kyjohnst2000@my.fit.edu>
  */
 public enum PhotometricColor {
@@ -30,6 +31,10 @@ public enum PhotometricColor {
         this.methodLabel = methodLabel;
     }
 
+    /**
+     *
+     * @return Label for what it is
+     */
     public String getMethodLabel() {
         return methodLabel;
     }

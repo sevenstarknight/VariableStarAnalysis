@@ -17,7 +17,7 @@
 package fit.astro.vsa.common.bindings.analysis.astro;
 
 /**
- * Astrometric Values
+ * Astrometric Values (Stellar positions)
  *
  * @author Kyle Johnston <kyjohnst2000@my.fit.edu>
  */
@@ -31,6 +31,10 @@ public enum Astrometrics {
         this.methodLabel = methodLabel;
     }
 
+    /**
+     * 
+     * @return Label for what it is
+     */
     public String getMethodLabel() {
         return methodLabel;
     }
