@@ -16,8 +16,6 @@
  */
 package fit.astro.vsa.common.bindings.math.vector.ebe;
 
-import fit.astro.vsa.common.bindings.math.vector.ebe.ElementFunction;
-
 /**
  * max
  * @author Kyle Johnston <kyjohnst2000@my.fit.edu>

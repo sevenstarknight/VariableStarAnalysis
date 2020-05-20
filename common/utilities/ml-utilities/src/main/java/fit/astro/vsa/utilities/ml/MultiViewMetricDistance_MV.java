@@ -16,7 +16,7 @@
  */
 package fit.astro.vsa.utilities.ml;
 
-import fit.astro.vsa.common.bindings.math.ml.metric.MultiViewMetric_MV;
+import fit.astro.vsa.common.bindings.ml.metric.MultiViewMetric_MV;
 import java.util.Map;
 import org.apache.commons.math3.linear.RealMatrix;
 

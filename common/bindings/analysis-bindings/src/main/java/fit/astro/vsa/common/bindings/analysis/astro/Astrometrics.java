@@ -18,6 +18,7 @@ package fit.astro.vsa.common.bindings.analysis.astro;
 
 /**
  * Astrometric Values
+ *
  * @author Kyle Johnston <kyjohnst2000@my.fit.edu>
  */
 public enum Astrometrics {

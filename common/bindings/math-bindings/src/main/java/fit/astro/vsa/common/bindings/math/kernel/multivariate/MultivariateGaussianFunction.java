@@ -1,5 +1,3 @@
-package fit.astro.vsa.common.bindings.math.kernel.multivariate;
-
 /*
  * Copyright (C) 2016 Kyle Johnston
  *
@@ -17,6 +15,8 @@ package fit.astro.vsa.common.bindings.math.kernel.multivariate;
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+
+package fit.astro.vsa.common.bindings.math.kernel.multivariate;
 
 import fit.astro.vsa.common.bindings.math.kernel.KernelMethod;
 import org.apache.commons.math3.linear.LUDecomposition;

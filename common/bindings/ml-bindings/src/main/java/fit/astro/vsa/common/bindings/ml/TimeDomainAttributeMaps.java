@@ -20,7 +20,9 @@ import fit.astro.vsa.common.bindings.math.Real2DCurve;
 import java.util.Map;
 
 /**
- * The pairing of time domain measurements and classes that define the underlying observation
+ * The pairing of time domain measurements and classes that define the
+ * underlying observation
+ *
  * @author Kyle Johnston <kyjohnst2000@my.fit.edu>
  */
 public class TimeDomainAttributeMaps {
@@ -29,17 +31,17 @@ public class TimeDomainAttributeMaps {
     private final Map<Integer, Real2DCurve> setOfWaveforms;
 
     public TimeDomainAttributeMaps(
-            Map<Integer, String> setOfClasses, 
+            Map<Integer, String> setOfClasses,
             Map<Integer, Real2DCurve> setOfWaveforms) {
 
         this.setOfClasses = setOfClasses;
         this.setOfWaveforms = setOfWaveforms;
     }
 
-
     /**
      * The set of labels that describe the data
-     * @return 
+     *
+     * @return
      */
     public Map<Integer, String> getSetOfClasses() {
         return setOfClasses;
@@ -47,7 +49,8 @@ public class TimeDomainAttributeMaps {
 
     /**
      * The set of waveform data (collection of weighted points)
-     * @return 
+     *
+     * @return
      */
     public Map<Integer, Real2DCurve> getSetOfWaveforms() {
         return setOfWaveforms;

@@ -16,7 +16,7 @@
  */
 package fit.astro.vsa.utilities.ml.knn;
 
-import fit.astro.vsa.common.bindings.math.ml.metric.MultiViewMetric_MV;
+import fit.astro.vsa.common.bindings.ml.metric.MultiViewMetric_MV;
 import fit.astro.vsa.common.datahandling.LabelHandling;
 import fit.astro.vsa.common.utilities.math.linearalgebra.MatrixOperations;
 import fit.astro.vsa.common.utilities.math.support.SortingOperations;

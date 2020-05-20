@@ -16,8 +16,8 @@
  */
 package fit.astro.vsa.common.bindings.analysis.astro;
 
-import fit.astro.vsa.common.bindings.math.ml.input.MultiView;
 import fit.astro.vsa.common.bindings.math.Real2DCurve;
+import fit.astro.vsa.common.bindings.ml.input.MultiView;
 import java.util.Map;
 
 /**

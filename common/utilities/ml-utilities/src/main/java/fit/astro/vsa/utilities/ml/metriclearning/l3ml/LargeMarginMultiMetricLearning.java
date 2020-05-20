@@ -16,7 +16,7 @@
  */
 package fit.astro.vsa.utilities.ml.metriclearning.l3ml;
 
-import fit.astro.vsa.common.bindings.math.ml.metric.MultiViewMetric;
+import fit.astro.vsa.common.bindings.ml.metric.MultiViewMetric;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;

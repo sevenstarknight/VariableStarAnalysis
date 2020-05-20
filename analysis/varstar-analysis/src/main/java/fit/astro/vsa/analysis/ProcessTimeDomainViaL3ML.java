@@ -24,7 +24,7 @@ import fit.astro.vsa.common.utilities.io.MatlabFunctions;
 import fit.astro.vsa.common.utilities.math.handling.exceptions.NotEnoughDataException;
 import fit.astro.vsa.common.utilities.math.linearalgebra.VectorOperations;
 import fit.astro.vsa.common.bindings.ml.ClassificationResult;
-import fit.astro.vsa.common.bindings.math.ml.metric.MultiViewMetric;
+import fit.astro.vsa.common.bindings.ml.metric.MultiViewMetric;
 import fit.astro.vsa.utilities.ml.knn.KNNMultiVectorMetric;
 import fit.astro.vsa.utilities.ml.metriclearning.l3ml.LargeMarginMultiMetricLearning;
 import fit.astro.vsa.utilities.ml.performance.ClassifierPerformance;

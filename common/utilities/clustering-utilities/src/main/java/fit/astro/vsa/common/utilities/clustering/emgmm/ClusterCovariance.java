@@ -16,7 +16,6 @@
  */
 package fit.astro.vsa.common.utilities.clustering.emgmm;
 
-import fit.astro.vsa.common.utilities.math.linearalgebra.MatrixOperations;
 import java.util.Map;
 import org.apache.commons.math3.analysis.function.Power;
 import org.apache.commons.math3.linear.ArrayRealVector;

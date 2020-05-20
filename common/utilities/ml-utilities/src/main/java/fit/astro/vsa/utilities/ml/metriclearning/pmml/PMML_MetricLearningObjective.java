@@ -16,9 +16,8 @@
  */
 package fit.astro.vsa.utilities.ml.metriclearning.pmml;
 
-import fit.astro.vsa.common.bindings.math.ml.metric.MultiViewMetric;
+import fit.astro.vsa.common.bindings.ml.metric.MultiViewMetric;
 import java.util.Map;
-import org.apache.commons.math3.linear.CholeskyDecomposition;
 import org.apache.commons.math3.linear.LUDecomposition;
 import org.apache.commons.math3.linear.MatrixUtils;
 import org.apache.commons.math3.linear.RealMatrix;
