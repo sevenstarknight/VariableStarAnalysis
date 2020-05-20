@@ -19,21 +19,21 @@ package fit.astro.vsa.common.bindings.ml;
 import java.util.Map;
 
 /**
+ * The resulting standard classification product
  *
  * @author Kyle Johnston <kyjohnst2000@my.fit.edu>
  */
 public class ClassificationResult {
 
     // <editor-fold defaultstate="collapsed" desc="Variables">
-    
     private final Map<Integer, String> labelEstimate;
     private final Map<Integer, Map<String, Double>> labelAndPostProb;
     private final Map<String, Integer> trainingDataCount;
     private Double threshold;
 
     // </editor-fold>
-    
     /**
+     * The resulting standard classification product
      *
      * @param labelEstimate input pattern -> key; label -> value
      * @param labelAndPostProb input patterns -> key ; label/prob map -> value
@@ -50,40 +50,40 @@ public class ClassificationResult {
 
     // <editor-fold defaultstate="collapsed" desc="Getters/Setters">
     /**
-     * 
-     * @return 
+     *
+     * @return
      */
     public Double getThreshold() {
         return threshold;
     }
 
     /**
-     * 
-     * @param threshold 
+     *
+     * @param threshold
      */
     public void setThreshold(Double threshold) {
         this.threshold = threshold;
     }
 
     /**
-     * 
-     * @return 
+     *
+     * @return
      */
     public Map<Integer, String> getLabelEstimate() {
         return labelEstimate;
     }
 
     /**
-     * 
-     * @return 
+     *
+     * @return
      */
     public Map<Integer, Map<String, Double>> getLabelAndPostProb() {
         return labelAndPostProb;
     }
 
     /**
-     * 
-     * @return 
+     *
+     * @return
      */
     public Map<String, Integer> getTrainingDataCount() {
         return trainingDataCount;

@@ -27,9 +27,18 @@ import java.util.Map;
  */
 public class TimeDomainAttributeMaps {
 
+//<editor-fold defaultstate="collapsed" desc="Variable">
     private final Map<Integer, String> setOfClasses;
     private final Map<Integer, Real2DCurve> setOfWaveforms;
+//</editor-fold>
 
+    /**
+     * The pairing of time domain measurements and classes that define the
+     * underlying observation
+     *
+     * @param setOfClasses
+     * @param setOfWaveforms
+     */
     public TimeDomainAttributeMaps(
             Map<Integer, String> setOfClasses,
             Map<Integer, Real2DCurve> setOfWaveforms) {

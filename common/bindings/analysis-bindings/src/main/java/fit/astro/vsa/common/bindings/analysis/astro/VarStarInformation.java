@@ -25,8 +25,10 @@ import java.util.Map;
  */
 public class VarStarInformation {
 
+//<editor-fold defaultstate="collapsed" desc="Variable">
     private final String id;
     private Map<Astrometrics, Double> astrometricValues;
+//</editor-fold>
 
     /**
      * Must have a name, might have other things
@@ -37,6 +39,7 @@ public class VarStarInformation {
         this.id = id;
     }
 
+//<editor-fold defaultstate="collapsed" desc="Getters and Setters">
     /**
      *
      * @return Target ID
@@ -61,5 +64,6 @@ public class VarStarInformation {
     public void setAstrometricValues(Map<Astrometrics, Double> astrometricValues) {
         this.astrometricValues = astrometricValues;
     }
+//</editor-fold>
 
 }
