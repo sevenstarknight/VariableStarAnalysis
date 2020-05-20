@@ -36,6 +36,7 @@ import org.apache.commons.math3.stat.correlation.Covariance;
  * Friedman, J., Hastie, T., & Tibshirani, R. (2001). The elements of
  * statistical learning (Vol. 1, No. 10). New York, NY, USA:: Springer series in
  * statistics.
+ *
  * @author Kyle Johnston kyjohnst2000@my.fit.edu
  */
 public class EMGMMClustering {
@@ -55,6 +56,10 @@ public class EMGMMClustering {
     private Map<Integer, ClusterGM> clusterCenters;
     private Map<Integer, List<Integer>> clusterMembers;
 
+    /**
+     *
+     * @param setOfTrainingData
+     */
     public EMGMMClustering(Map<Integer, RealVector> setOfTrainingData) {
         this.setOfTrainingData = setOfTrainingData;
 
@@ -64,15 +69,26 @@ public class EMGMMClustering {
         this.patternSize = firstVector.getDimension();
     }
 
+    /**
+     *
+     * @param numClusters
+     * @return
+     */
     public Map<Integer, List<Integer>> execute(int numClusters) {
         return execute(numClusters, CovarianceType.HeteroscedasticUnrestricted);
     }
 
+    /**
+     *
+     * @param numClusters
+     * @param covarianceType
+     * @return
+     */
     public Map<Integer, List<Integer>> execute(int numClusters,
             CovarianceType covarianceType) {
         this.numClusters = numClusters;
-        List<ClusterGM> clusters = 
-                InitializeCluster(setOfTrainingData, numClusters);
+        List<ClusterGM> clusters
+                = InitializeCluster(setOfTrainingData, numClusters);
 
         incLogArrayK0 = 0;
         int counter = 1;
@@ -88,7 +104,6 @@ public class EMGMMClustering {
             if (counter > 100 && Math.abs(delta) < 10) {
                 break;
             }
-
 
             delta = incLogArrayK1 - incLogArrayK0;
             incLogArrayK0 = incLogArrayK1;
@@ -118,7 +133,7 @@ public class EMGMMClustering {
         Map<Integer, RealVector> expectation = new HashMap<>();
 
         incLogArrayK1 = 0;
-        
+
         for (Integer idx : setOfTrainingData.keySet()) {
             RealVector currentData = setOfTrainingData.get(idx);
 
@@ -167,16 +182,18 @@ public class EMGMMClustering {
             meanCenter = meanCenter.mapDivide(probSum);
             ClusterCovariance clusterCovariance = new ClusterCovariance(setOfTrainingData, probSum,
                     expectMap, meanCenter);
-            
+
             RealMatrix cov = clusterCovariance.estimate(CovarianceType.HomoscedasticDiagonal);
 
-            
-            
-            cluster.updateCluster(meanCenter, cov, probSum/(double)setOfTrainingData.size());
+            cluster.updateCluster(meanCenter, cov, probSum / (double) setOfTrainingData.size());
         }
 
     }
 
+    /**
+     * 
+     * @param tolerance 
+     */
     public void setTolerance(double tolerance) {
         this.tolerance = tolerance;
     }
@@ -214,17 +231,21 @@ public class EMGMMClustering {
             clusters.add(new ClusterGM(0, setOfData.get(0), covMatrix, numClusters));
             clusters.add(new ClusterGM(1, setOfData.get(setOfData.size() - 1), covMatrix, numClusters));
         } else {
-            double[] steps = VectorOperations.linearSpace((double) setOfData.size() - 1, 
+            double[] steps = VectorOperations.linearSpace((double) setOfData.size() - 1,
                     (double) 0.0, numClusters);
             for (int idx = 0; idx < numClusters; idx++) {
                 clusters.add(new ClusterGM(idx, setOfData.get(
-                        (int) Math.round(steps[idx])), 
+                        (int) Math.round(steps[idx])),
                         covMatrix, numClusters));
             }
         }
         return clusters;
     }
 
+    /**
+     * 
+     * @return 
+     */
     public Map<Integer, ClusterGM> getClusterCenters() {
         return clusterCenters;
     }
