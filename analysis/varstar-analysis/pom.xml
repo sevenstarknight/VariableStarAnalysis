@@ -21,11 +21,7 @@
             <artifactId>ml-utilities</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <dependency>
-            <groupId>fit.astro.vsa.common.utilities</groupId>
-            <artifactId>feature-reduction-utilities</artifactId>
-            <version>${project.version}</version>
-        </dependency>
+ 
         <dependency>
             <groupId>fit.astro.vsa.common.utilities</groupId>
             <artifactId>clustering-utilities</artifactId>
